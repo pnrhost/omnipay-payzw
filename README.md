@@ -3,7 +3,7 @@
 
 **Paynow driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/thephpleague/omnipay-Paynow.png?branch=master)](https://travis-ci.org/thephpleague/omnipay-Paynow)
+[![Build Status](https://travis-ci.org/pnrhost/omnipay-paynow.png?branch=master)](https://travis-ci.org/pnrhost/omnipay-paynow)
 [![Latest Stable Version](https://poser.pugx.org/omnipay/Paynow/version.png)](https://packagist.org/packages/omnipay/Paynow)
 [![Total Downloads](https://poser.pugx.org/omnipay/Paynow/d/total.png)](https://packagist.org/packages/omnipay/Paynow)
 
@@ -18,7 +18,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "omnipay/Paynow": "~2.0"
+        "omnipay/paynow": "~2.0"
     }
 }
 ```
