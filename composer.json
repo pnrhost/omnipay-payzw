@@ -1,5 +1,5 @@
 {
-    "name": "omnipay/paypal",
+    "name": "omnipay/payzw",
     "type": "library",
     "description": "PayPal gateway for Omnipay payment processing library",
     "keywords": [
@@ -8,19 +8,19 @@
         "omnipay",
         "pay",
         "payment",
-        "paypal",
+        "payzw",
         "purchase"
     ],
-    "homepage": "https://github.com/thephpleague/omnipay-paypal",
+    "homepage": "https://github.com/pnrhost/omnipay-payzw",
     "license": "MIT",
     "authors": [
         {
-            "name": "Adrian Macneil",
-            "email": "adrian@adrianmacneil.com"
+            "name": "Privilege Nyauta",
+            "email": "privyreza@gmail.com"
         },
         {
             "name": "Omnipay Contributors",
-            "homepage": "https://github.com/thephpleague/omnipay-paypal/contributors"
+            "homepage": "https://github.com/pnrhost/omnipay-payzw/contributors"
         }
     ],
     "autoload": {

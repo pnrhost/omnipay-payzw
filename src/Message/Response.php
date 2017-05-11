@@ -1,46 +1,25 @@
 <?php
-
-namespace Omnipay\PayPal\Message;
-
+namespace Omnipay\Dummy\Message;
 use Omnipay\Common\Message\AbstractResponse;
-use Omnipay\Common\Message\RequestInterface;
-
 /**
- * PayPal Response
+ * Dummy Response
+ *
+ * This is the response class for all Dummy requests.
+ *
+ * @see \Omnipay\Dummy\Gateway
  */
 class Response extends AbstractResponse
 {
-    public function __construct(RequestInterface $request, $data)
-    {
-        $this->request = $request;
-        parse_str($data, $this->data);
-    }
-
-    public function isPending()
-    {
-        return isset($this->data['PAYMENTINFO_0_PAYMENTSTATUS'])
-            && $this->data['PAYMENTINFO_0_PAYMENTSTATUS'] == 'Pending';
-    }
-
     public function isSuccessful()
     {
-        return isset($this->data['ACK']) && in_array($this->data['ACK'], array('Success', 'SuccessWithWarning'));
+        return isset($this->data['success']) && $this->data['success'];
     }
-
     public function getTransactionReference()
     {
-        foreach (array('REFUNDTRANSACTIONID',
-            'TRANSACTIONID',
-            'PAYMENTINFO_0_TRANSACTIONID',
-            'AUTHORIZATIONID') as $key) {
-            if (isset($this->data[$key])) {
-                return $this->data[$key];
-            }
-        }
+        return isset($this->data['reference']) ? $this->data['reference'] : null;
     }
-
     public function getMessage()
     {
-        return isset($this->data['L_LONGMESSAGE0']) ? $this->data['L_LONGMESSAGE0'] : null;
+        return isset($this->data['message']) ? $this->data['message'] : null;
     }
 }
