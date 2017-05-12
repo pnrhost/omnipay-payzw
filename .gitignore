@@ -1,0 +1,6 @@
+/nbproject
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+.env
