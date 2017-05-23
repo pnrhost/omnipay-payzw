@@ -1,14 +1,14 @@
 
-# Omnipay: Paynow
+# Omnipay: Payzw
 
-**Paynow driver for the Omnipay PHP payment processing library**
+**Payzw driver for the Omnipay PHP payment processing library**
 
 [![Build Status](https://travis-ci.org/pnrhost/omnipay-payzw.png?branch=master)](https://travis-ci.org/pnrhost/omnipay-payzw)
-[![Latest Stable Version](https://poser.pugx.org/omnipay/Paynow/version.png)](https://packagist.org/packages/omnipay/Paynow)
-[![Total Downloads](https://poser.pugx.org/omnipay/Paynow/d/total.png)](https://packagist.org/packages/omnipay/Paynow)
+[![Latest Stable Version](https://poser.pugx.org/omnipay/Payzw/version.png)](https://packagist.org/packages/omnipay/Payzw)
+[![Total Downloads](https://poser.pugx.org/omnipay/Payzw/d/total.png)](https://packagist.org/packages/omnipay/Payzw)
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
-processing library for PHP 5.3+. This package implements Paynow support for Omnipay.
+processing library for PHP 5.3+. This package implements Payzw support for Omnipay.
 
 ## Installation
 
@@ -62,5 +62,6 @@ or better yet, fork the library and submit a pull request.
 2. Create tests
 
 ## Credits
-[Paynow](#)
-[Del] (https://github.com/delatbabel)
+[Payzw](#)
+
+[Del](https://github.com/delatbabel)
