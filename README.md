@@ -3,7 +3,7 @@
 
 **Paynow driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/pnrhost/omnipay-paynow.png?branch=master)](https://travis-ci.org/pnrhost/omnipay-paynow)
+[![Build Status](https://travis-ci.org/pnrhost/omnipay-payzw.png?branch=master)](https://travis-ci.org/pnrhost/omnipay-payzw)
 [![Latest Stable Version](https://poser.pugx.org/omnipay/Paynow/version.png)](https://packagist.org/packages/omnipay/Paynow)
 [![Total Downloads](https://poser.pugx.org/omnipay/Paynow/d/total.png)](https://packagist.org/packages/omnipay/Paynow)
 
@@ -18,7 +18,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "omnipay/paynow": "~2.0"
+        "omnipay/payzw": "~2.0"
     }
 }
 ```
@@ -54,5 +54,13 @@ If you want to keep up to date with release anouncements, discuss ideas for the 
 or ask more detailed questions, there is also a [mailing list](https://groups.google.com/forum/#!forum/omnipay) which
 you can subscribe to.
 
-If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/thephpleague/omnipay-Paynow/issues),
+If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/thephpleague/omnipay-payzw/issues),
 or better yet, fork the library and submit a pull request.
+
+## TODO
+1. Complete on the gateway functionality
+2. Create tests
+
+## Credits
+[Paynow](#)
+[Del] (https://github.com/delatbabel)
