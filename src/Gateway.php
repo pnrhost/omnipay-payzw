@@ -11,6 +11,8 @@
 namespace Omnipay\Payzw;
 
 use Omnipay\Common\AbstractGateway;
+use Omnipay\Payzw\Message\AuthorizeRequest;
+
 
 /**
  * Omninpay-payzw Gateway.php
@@ -85,18 +87,18 @@ class Gateway extends AbstractGateway
     /**
      * Create an authorize request.
      *
-     * @param array $parameters
+     * @param array $parameters send data from website to be authorised
      * 
      * @return \Omnipay\Payzw\Message\AuthorizeRequest
      */
     public function authorize(array $parameters = array())
     {
-        return $this->createRequest('\Omnipay\Payzw\Message\AuthorizeRequest', $parameters);
+        return $this->createRequest('AuthorizeRequest', $parameters);
     }
     /**
      * Create a purchase request.
      *
-     * @param array $parameters
+     * @param array $parameters purchase details
      * 
      * @return \Omnipay\Payzw\Message\AuthorizeRequest
      */
