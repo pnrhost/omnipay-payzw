@@ -1,9 +1,29 @@
 <?php
+/**
+ * Gateway Class Doc Comment
+ *
+ * @category Class
+ * @package  Omnipay\Payzw
+ * @author   pnrhost <privyreza@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     http://github.com/pnrhost/omnipay-payzw
+ */
 namespace Omnipay\Payzw;
 
 use Omnipay\Common\AbstractGateway;
+
 /**
- * Omninpay-payzw Gateway
+ * Omninpay-payzw Gateway.php
+ * 
+ * Class summary
+ * A longer class description 
+ *
+ * @category Class
+ * @package  Omnipay\Payzw
+ * @author   pnrhost <privyreza@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     http://github.com/pnrhost/omnipay-payzw
+ *
  * 
  * ### Example
  *
@@ -44,10 +64,20 @@ use Omnipay\Common\AbstractGateway;
  */
 class Gateway extends AbstractGateway
 {
+    /**
+     * Get the name for the gateway
+     * 
+     * @return string
+     */
     public function getName()
     {
         return 'Payzw';
     }
+    /**
+     * Set default gateway parameters
+     *
+     * @return type
+     */
     public function getDefaultParameters()
     {
         return array();
@@ -55,7 +85,8 @@ class Gateway extends AbstractGateway
     /**
      * Create an authorize request.
      *
-     * @param  array $parameters
+     * @param array $parameters
+     * 
      * @return \Omnipay\Payzw\Message\AuthorizeRequest
      */
     public function authorize(array $parameters = array())
@@ -65,7 +96,8 @@ class Gateway extends AbstractGateway
     /**
      * Create a purchase request.
      *
-     * @param  array $parameters
+     * @param array $parameters
+     * 
      * @return \Omnipay\Payzw\Message\AuthorizeRequest
      */
     public function purchase(array $parameters = array())

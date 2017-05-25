@@ -1,6 +1,8 @@
 <?php
 namespace Omnipay\Payzw\Message;
+
 use Omnipay\Common\Message\AbstractRequest;
+
 /**
  * Dummy Authorize Request
  *
@@ -59,23 +61,22 @@ class AuthorizeRequest extends AbstractRequest
     
     /**
      * Paynow raw - needs adjustments
-     */
-    
+     */    
     public function paynow(Request $request) 
     {
          /*********************************************
         1. Define Constants
         *********************************************/
-        define('ps_error', 'Error');
-        define('ps_ok', 'Ok');
-        define('ps_created_but_not_paid', 'created but not paid');
-        define('ps_cancelled', 'cancelled');
-        define('ps_failed', 'failed');
-        define('ps_paid', 'paid');
-        define('ps_awaiting_delivery', 'awaiting delivery');
-        define('ps_delivered', 'delivered');
-        define('ps_awaiting_redirect', 'awaiting redirect');
-        define('site_url', $_SERVER['REQUEST_URI']);
+        define('PS_ERROR', 'Error');
+        define('PS_OK', 'Ok');
+        define('PS_CREATED_BUT_NOT_PAID', 'created but not paid');
+        define('PS_CANCELLED', 'cancelled');
+        define('PS_FAILED', 'failed');
+        define('PS_PAID', 'paid');
+        define('PS_AWAITING_DELIVERY', 'awaiting delivery');
+        define('PS_DELIVERED', 'delivered');
+        define('PS_AWAITING_REDIRECT', 'awaiting redirect');
+        define('SITE_URL', $_SERVER['REQUEST_URI']);
 
         /*********************************************
         2. sitewide variables, settings
@@ -85,7 +86,7 @@ class AuthorizeRequest extends AbstractRequest
         $integration_key = '88d66633-b868-43a3-80d2-e651a774977e'; //oops this MUST BE SECRET, take it from a Database, encrypted or something
         $initiate_transaction_url = 'https://www.paynow.co.zw/Interface/InitiateTransaction';
         $orders_data_file = 'ordersdata.ini';
-        $checkout_url = site_url;
+        $checkout_url = SITE_URL;
         $user = Auth::user();
 
 
@@ -119,13 +120,13 @@ class AuthorizeRequest extends AbstractRequest
                 $msg = ParseMsg($result);
         
                 //first check status, take appropriate action
-            if ($msg["status"] == ps_error) {
+            if ($msg["status"] == PS_ERROR) {
                 //var_dump($msg);exit;
                 //header("Location: $checkout_url");
                 //exit;
                 $error = $msg['error'];
             }
-            else if ($msg["status"] == ps_ok) {
+            else if ($msg["status"] == PS_OK) {
             
                 //second, check hash
                 $validateHash = CreateHash($msg, $integration_key);
