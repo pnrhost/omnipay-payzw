@@ -4,7 +4,6 @@ namespace Omnipay\Payzw;
 use Omnipay\Common\AbstractGateway;
 /**
  * Omninpay-payzw Gateway
- *
  * 
  * ### Example
  *
@@ -56,7 +55,7 @@ class Gateway extends AbstractGateway
     /**
      * Create an authorize request.
      *
-     * @param array $parameters
+     * @param  array $parameters
      * @return \Omnipay\Payzw\Message\AuthorizeRequest
      */
     public function authorize(array $parameters = array())
@@ -66,7 +65,7 @@ class Gateway extends AbstractGateway
     /**
      * Create a purchase request.
      *
-     * @param array $parameters
+     * @param  array $parameters
      * @return \Omnipay\Payzw\Message\AuthorizeRequest
      */
     public function purchase(array $parameters = array())
